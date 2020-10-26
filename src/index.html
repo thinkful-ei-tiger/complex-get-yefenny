@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National parks app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>National parks app</h1>
+        <form class='js-form'>
+            <label for="stateCode"> State code (If more than one separate by comma)
+            </label>
+            <input type="text" name="" id="stateCode" placeholder="FL,TX,AL">
+            <label for="limit">Max number of results: </label>
+            <input type="number" required value="10" min="1" id="limit">
+            <input type="submit" value="Get parks">
+        </form>
+        <div class="js-results">
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #888888;
+    color: #ffe8df;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.container form input{
+    width: fit-content;
+    margin: 10px 10px;
+}
+
+.container form input[type=submit]{
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #f0f0f0;
+    color: #888888;
+
+}
+
+h1{
+    align-self: center;
+}
