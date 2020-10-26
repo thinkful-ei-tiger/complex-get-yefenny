@@ -27,7 +27,14 @@ body{
     color: #888888;
 
 }
+.hidden {
+    display: none;
+}
 
 h1{
     align-self: center;
+}
+
+li{
+    list-style: none;
 }

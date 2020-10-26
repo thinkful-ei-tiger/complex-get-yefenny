@@ -12,15 +12,18 @@
         <form class='js-form'>
             <label for="stateCode"> State code (If more than one separate by comma)
             </label>
-            <input type="text" name="" id="stateCode" placeholder="FL,TX,AL">
+            <input type="text" name="" id="stateCode" placeholder="FL,TX,AL" required>
             <label for="limit">Max number of results: </label>
             <input type="number" required value="10" min="1" id="limit">
             <input type="submit" value="Get parks">
         </form>
-        <div class="js-results">
-
-        </div>
+        <p id="js-error-message" class="error-message"></p>
+        <section class="js-results hidden">
+            <h2>Parks:</h2>
+            <ul id="js-result-list"></ul>
+        </section>
     </div>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cuid/1.3.8/browser-cuid.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </body>
 </html>
