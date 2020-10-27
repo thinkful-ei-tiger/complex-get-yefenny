@@ -4,9 +4,21 @@ const url = 'https://developer.nps.gov/api/v1/parks';
 function displayParks(response) {
   let newList = '';
   for (let i = 0; i < response.data.length; i++) {
+    let shortResponse = response.data[i].addresses[0];
+    let address = `${shortResponse.line1} <br> `;
+    !shortResponse.line2 === ''
+      ? (address += `${shortResponse.line2} <br>`)
+      : '';
+    !shortResponse.line3 === ''
+      ? (address += `${shortResponse.line3} <br>`)
+      : '';
+    address += `${shortResponse.city},${shortResponse.stateCode}<br>
+    ${shortResponse.postalCode}<br>
+    ${shortResponse.type} `;
     newList += ` <li>
         <h3>${response.data[i].fullName}</h3>
         <p>${response.data[i].description}</p>
+        <p>Address: ${address}</p>
         <a href=${response.data[i].url} target='_black'>Go to the website</a>
       </li>`;
   }
